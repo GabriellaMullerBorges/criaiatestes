@@ -32,7 +32,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.get('#email').type('gabimullerborges')
         cy.get('#open-text-area').type('teste')
         cy.get('button[type=submit]').click()
-        cy.get('.success').should('be.visible')
+        cy.get('.error').should('be.visible')
      })
 
      it('telefone continua vazio quando preenchido com valor inválido', function() {
@@ -49,7 +49,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.get('button[type=submit]').click()
 
         cy.get('.error').should('be.visible')
-     }) //é para dar erro aqui, pq sucesso não deve ser visível
+     })
 
      it('preenche e limpa os campos', function(){
         cy.get('#firstName').type('Gabi').should('have.value', 'Gabi').clear()
