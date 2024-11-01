@@ -47,7 +47,8 @@ describe('Página /additionalInformation - Validação do Campo CPF em Branco', 
 
     cy.get('button[type="submit"]').click();
     
-    cy.get('button[type="submit"]').should('not.be.disabled');
+    cy.get('button[type="submit"]').should('not.be.disabled')
+
   });
 });
  
